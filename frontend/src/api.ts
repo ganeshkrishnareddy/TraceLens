@@ -270,7 +270,7 @@ function bodyOf(opts?: RequestInit): any {
 
 async function request<T>(path: string, opts: RequestInit | undefined, fallback: () => T): Promise<T> {
   const controller = new AbortController()
-  const timer = window.setTimeout(() => controller.abort(), 3000)
+  const timer = window.setTimeout(() => controller.abort(), 15000)
   try {
     const isForm = typeof FormData !== 'undefined' && opts?.body instanceof FormData
     const token = getToken()
@@ -297,7 +297,8 @@ async function request<T>(path: string, opts: RequestInit | undefined, fallback:
  */
 async function requestStrict<T>(path: string, opts: RequestInit): Promise<T> {
   const controller = new AbortController()
-  const timer = window.setTimeout(() => controller.abort(), 8000)
+  // Render's free tier sleeps after idle; allow time for a cold start to wake.
+  const timer = window.setTimeout(() => controller.abort(), 45000)
   try {
     const token = getToken()
     const authHeader: Record<string, string> = token ? { Authorization: `Bearer ${token}` } : {}
