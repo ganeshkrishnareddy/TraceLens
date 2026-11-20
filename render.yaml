@@ -1,0 +1,15 @@
+# TraceLens API — free Render web service
+# Create it in Render with "New > Blueprint" and this repository.
+services:
+  - type: web
+    name: tracelens-api
+    runtime: python
+    plan: free
+    region: singapore
+    branch: main
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: cd backend && uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.0"
