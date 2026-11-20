@@ -46,7 +46,47 @@ def init_db() -> Dict[str, int]:
         c.commit()
     finally:
         c.close()
+    seed_demo_data()
     return counts
+
+
+def seed_demo_data() -> Dict[str, int]:
+    """Populate a fresh database with clearly-labelled synthetic demo data.
+
+    Free hosts use an ephemeral disk, so each new deploy starts from an empty
+    SQLite file. Seeding through the app's own services keeps the public demo
+    useful without committing a binary database or any real data to the repo.
+    """
+    stats = {"datasets": 0, "detections": 0, "reports": 0}
+    c = _conn()
+    try:
+        if c.execute("SELECT COUNT(*) FROM datasets").fetchone()[0] > 0:
+            return stats
+    finally:
+        c.close()
+
+    # Imported lazily: these services import this module at load time.
+    from app.services import demo_service, ml_service, reporting
+
+    for scenario, method in (
+        ("cpu_spike", "statistical_mad"),
+        ("combined_anomaly", "isolation_forest"),
+        ("memory_leak", "statistical_mad"),
+    ):
+        try:
+            loaded = demo_service.load_scenario(scenario, n_rows=80)
+            did = loaded["dataset_id"]
+            stats["datasets"] += 1
+            model = ml_service.train_model(did, method, 0.3)
+            detection = ml_service.run_detection(did, model["model_id"], 0.3)
+            stats["detections"] += 1
+            reporting.create_report(detection_id=detection["detection_id"],
+                                    kind="anomaly_detection")
+            stats["reports"] += 1
+        except Exception:
+            # Seeding must never prevent the API from starting.
+            continue
+    return stats
 
 
 def new_id(prefix: str = "") -> str:
