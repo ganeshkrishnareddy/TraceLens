@@ -1,2 +1,2 @@
 # Keep the frontend on one origin; the API runs on Render's free tier.
-/api/*  https://tracelens-api-7wtj.onrender.com/api/*  200
+/api/*  https://tracelens-api-7wtj.onrender.com/api/:splat  200
