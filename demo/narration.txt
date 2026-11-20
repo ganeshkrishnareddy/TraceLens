@@ -1,8 +1,8 @@
-TraceLens turns raw infrastructure telemetry into explainable anomaly detection and a guided investigation workspace.
-The data: 1,440 windows — 1,200 normal, 240 anomalous; 1,008 train and 432 test.
-Two unsupervised detectors are compared: Isolation Forest and statistical M A D with I Q R thresholds.
-Isolation Forest: F one 0.714, A U C 0.886. M A D I Q R: F one 0.769, A U C 0.901.
-Every flagged record carries severity, affected metrics, and an evidence trail, so triage starts from a hypothesis instead of a black box.
-R E C zero zero zero one two three: C P U plus 105 percent, memory plus 58 percent, error rate plus 697 percent.
-Experiments, generated reports, and fixed seeds make each run reproducible and easy to review.
-All forty tests pass, and the complete pipeline runs locally from data generation through reporting.
+TraceLens is explainable anomaly intelligence for the people who have to act on the alert. See the signal, understand the anomaly, act with confidence.
+Most detectors stop at a red flag. TraceLens carries it to a decision, with evidence, a next check and stated unknowns.
+Isolation Forest and statistical M A D with I Q R thresholds run on labelled synthetic telemetry, scored with F one and R O C AUC.
+Every figure comes from held out synthetic data with fixed seeds. Limitations are stated plainly, not hidden.
+Judge mode walks the full flow: load a scenario, run detection, read the evidence, escalate, and export a report.
+No setup is needed. Try the real workflows from the public site with a demo account or the guided path.
+Built solo for AEGYTHON 2026 under ProgVision. Independent, AI assisted, with no claimed deployments or partnerships.
+The analyst workspace ties detection to investigation, incident history and reporting. Explore the live site and source.
