@@ -1,2 +1,5 @@
-# Keep the frontend on one origin; the API runs on Render's free tier.
+# API runs on Render's free tier; keep the frontend on one origin.
 /api/*  https://tracelens-api-7wtj.onrender.com/api/:splat  200
+
+# React Router owns the rest of the routes: serve the app shell on deep links.
+/*  /index.html  200
