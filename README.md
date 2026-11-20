@@ -12,6 +12,8 @@
 [![Tests](https://img.shields.io/badge/tests-66%20passed-0F766E)](documentation/TESTING_REPORT.md)
 [![License: MIT](https://img.shields.io/badge/license-MIT-2563EB)](LICENSE)
 
+**Live site: [tracelensproject.netlify.app](https://tracelensproject.netlify.app/)**
+
 **AEGYTHON 2026 · ProgVision · Individual participant · P. Ganesh Krishna Reddy**
 
 </div>
@@ -207,6 +209,7 @@ general result.
 
 ## Contact
 
+- **Live site:** https://tracelensproject.netlify.app/
 - **Email:** pganeshkrishnareddy@gmail.com
 - **LinkedIn:** https://linkedin.com/in/pganeshkrishnareddy
 - **GitHub:** https://github.com/ganeshkrishnareddy
