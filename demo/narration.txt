@@ -1,0 +1,8 @@
+TraceLens turns raw infrastructure telemetry into explainable anomaly detection and a guided investigation workspace.
+The data: 1,440 windows — 1,200 normal, 240 anomalous; 1,008 train and 432 test.
+Two unsupervised detectors are compared: Isolation Forest and statistical M A D with I Q R thresholds.
+Isolation Forest: F one 0.714, A U C 0.886. M A D I Q R: F one 0.769, A U C 0.901.
+Every flagged record carries severity, affected metrics, and an evidence trail, so triage starts from a hypothesis instead of a black box.
+R E C zero zero zero one two three: C P U plus 105 percent, memory plus 58 percent, error rate plus 697 percent.
+Experiments, generated reports, and fixed seeds make each run reproducible and easy to review.
+All forty tests pass, and the complete pipeline runs locally from data generation through reporting.

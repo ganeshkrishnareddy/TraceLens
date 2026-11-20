@@ -1,0 +1,117 @@
+{
+  "generatedAt": "2026-11-20T08:14:54.249Z",
+  "source": "headless Chrome Page.captureScreenshot",
+  "chrome": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "base": "http://127.0.0.1:5173",
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "note": "Only images with status \"captured\" were written by this run. No image is generated or fabricated.",
+  "shots": [
+    {
+      "file": "hero.png",
+      "route": "/",
+      "status": "captured",
+      "label": "Landing hero",
+      "bytes": 107222,
+      "capturedAt": "2026-11-20T08:14:31.191Z"
+    },
+    {
+      "file": "storytelling.png",
+      "route": "/",
+      "status": "captured",
+      "label": "Six scroll acts",
+      "bytes": 83373,
+      "capturedAt": "2026-11-20T08:14:33.712Z"
+    },
+    {
+      "file": "about.png",
+      "route": "/about",
+      "status": "captured",
+      "label": "About page",
+      "bytes": 91176,
+      "capturedAt": "2026-11-20T08:14:35.444Z"
+    },
+    {
+      "file": "login.png",
+      "route": "/login",
+      "status": "captured",
+      "label": "Sign-in page",
+      "bytes": 90984,
+      "capturedAt": "2026-11-20T08:14:37.155Z"
+    },
+    {
+      "file": "judge-mode.png",
+      "route": "/judge",
+      "status": "captured",
+      "label": "Judge walkthrough",
+      "bytes": 75980,
+      "capturedAt": "2026-11-20T08:14:38.862Z"
+    },
+    {
+      "file": "overview.png",
+      "route": "/app/overview",
+      "status": "captured",
+      "label": "Analyst overview",
+      "bytes": 98567,
+      "capturedAt": "2026-11-20T08:14:40.599Z"
+    },
+    {
+      "file": "data-lab.png",
+      "route": "/app/data",
+      "status": "captured",
+      "label": "Data Lab",
+      "bytes": 108153,
+      "capturedAt": "2026-11-20T08:14:42.355Z"
+    },
+    {
+      "file": "detection.png",
+      "route": "/app/detect",
+      "status": "captured",
+      "label": "Detection results",
+      "bytes": 101090,
+      "capturedAt": "2026-11-20T08:14:44.123Z"
+    },
+    {
+      "file": "investigation.png",
+      "route": "/app/investigate",
+      "status": "captured",
+      "label": "Incident investigation",
+      "bytes": 150910,
+      "capturedAt": "2026-11-20T08:14:45.918Z"
+    },
+    {
+      "file": "escalation.png",
+      "route": "/app/investigate",
+      "status": "captured",
+      "label": "Incident escalation form",
+      "bytes": 55669,
+      "capturedAt": "2026-11-20T08:14:48.498Z"
+    },
+    {
+      "file": "explainability.png",
+      "route": "/app/explain",
+      "status": "captured",
+      "label": "Explainability",
+      "bytes": 110705,
+      "capturedAt": "2026-11-20T08:14:50.234Z"
+    },
+    {
+      "file": "experiments.png",
+      "route": "/app/experiments",
+      "status": "captured",
+      "label": "Experiment lab",
+      "bytes": 96139,
+      "capturedAt": "2026-11-20T08:14:51.958Z"
+    },
+    {
+      "file": "reports.png",
+      "route": "/app/reports",
+      "status": "captured",
+      "label": "Reports",
+      "bytes": 121105,
+      "capturedAt": "2026-11-20T08:14:53.690Z"
+    }
+  ]
+}

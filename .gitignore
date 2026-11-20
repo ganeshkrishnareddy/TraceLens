@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+env/
+
+# Node / frontend
+node_modules/
+dist/
+.vite/
+
+# Environment / secrets
+.env
+*.local
+
+# TraceLens generated artefacts
+datasets/**/*.csv
+datasets/**/*.meta.json
+tracelens.db
+tracelens.db-*
+models/*.pkl
+experiments/*
+reports/*.json
+reports/*.md
+logs/*
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Keep placeholder directories in git
+!datasets/**/.gitkeep
+!experiments/.gitkeep
+!reports/.gitkeep
+!logs/.gitkeep

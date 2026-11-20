@@ -1,0 +1,8 @@
+# TraceLens ml-engine — pinned for reproducibility
+# Verified on Python 3.12.10 / Windows (install with: python -m pip install -r ml-engine/requirements.txt)
+numpy==2.5.1
+pandas==3.0.5
+scipy==1.18.1
+scikit-learn==1.9.1
+joblib==1.6.0
+pytest==9.2.0

@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* TraceLens 2.0 — light-only design tokens. See documentation/TRANSFORMATION_CONTRACT.md */
+:root {
+  color-scheme: light;
+  --navy: #0B1F3A;
+  --paper: #F6F8FB;
+  --soft: #EEF2F7;
+  --line: #E2E8F0;
+  --ink: #0B1F3A;
+  --body: #334155;
+  --muted: #64748B;
+  --teal: #0E7C7B;
+  --teal-hover: #0A6363;
+  --secondary: #2563EB;
+  --success: #0F766E;
+  --warning: #B45309;
+  --critical: #B91C1C;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--paper);
+  color: var(--body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection { background: rgba(14, 124, 123, .16); color: var(--ink); }
+
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
+}
+
+@layer components {
+  .surface {
+    @apply bg-white border border-line rounded-card shadow-card;
+  }
+
+  .card {
+    @apply surface p-5;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors min-h-[36px] disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-primary {
+    @apply btn bg-primary text-white hover:bg-primary-hover;
+  }
+
+  .btn-secondary {
+    @apply btn bg-soft text-ink hover:bg-line;
+  }
+
+  .btn-ghost {
+    @apply btn bg-transparent text-body hover:bg-soft;
+  }
+
+  .btn-danger {
+    @apply btn bg-critical text-white hover:brightness-95;
+  }
+
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.14em] text-primary;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-semibold tracking-tight text-ink;
+  }
+
+  .pill {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-line bg-white px-2.5 py-1 text-xs font-medium text-muted;
+  }
+
+  .skeleton {
+    @apply animate-pulse rounded-md bg-soft;
+  }
+
+  .field-label {
+    @apply block text-sm font-medium text-ink mb-1.5;
+  }
+}
+
+input, select, textarea {
+  @apply border border-line rounded-lg px-3 py-2 text-sm bg-white text-body placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary;
+}
+
+table { @apply w-full text-sm; }
+th { @apply text-left font-semibold text-muted border-b border-line py-2 px-2; }
+td { @apply py-2 px-2 border-b border-soft text-body; }
+
+/* Charts and focus rings stay crisp; motion respects the user's setting. */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}

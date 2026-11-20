@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 210" role="img" aria-label="TraceLens — See the signal. Understand the anomaly. Act with confidence.">
+  <title>TraceLens — See the signal. Understand the anomaly. Act with confidence.</title>
+  <defs>
+    <clipPath id="tl-hero-lens"><circle cx="32" cy="32" r="16"/></clipPath>
+  </defs>
+  <g transform="translate(24 53) scale(1.6)">
+    <g fill="none" stroke="#0E7C7B" stroke-width="4" stroke-linecap="round">
+      <path d="M53.84 34.68 A22 22 0 0 1 45.24 49.57"/>
+      <path d="M40.60 52.25 A22 22 0 0 1 23.40 52.25"/>
+      <path d="M18.76 49.57 A22 22 0 0 1 10.16 34.68"/>
+      <path d="M10.16 29.32 A22 22 0 0 1 18.76 14.43"/>
+      <path d="M23.40 11.75 A22 22 0 0 1 40.60 11.75"/>
+      <path d="M45.24 14.43 A22 22 0 0 1 53.84 29.32"/>
+    </g>
+    <circle cx="32" cy="32" r="16" fill="#E8F4F3"/>
+    <g clip-path="url(#tl-hero-lens)">
+      <path d="M14 26h36M14 40h36" stroke="#94A3B8" stroke-opacity=".35" stroke-width="1"/>
+      <path d="M14 40 L21 40 L26 25 L33 37 L39 19 L50 19" fill="none" stroke="#0B1F3A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="26" cy="25" r="3" fill="#0E7C7B" stroke="#FFFFFF" stroke-width="1.6"/>
+      <circle cx="33" cy="37" r="3" fill="#0E7C7B" stroke="#FFFFFF" stroke-width="1.6"/>
+      <circle cx="39" cy="19" r="3.4" fill="#2563EB" stroke="#FFFFFF" stroke-width="1.8"/>
+    </g>
+  </g>
+  <text x="150" y="108" fill="#0B1F3A" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="58" font-weight="700" letter-spacing="-2">Trace<tspan fill="#0E7C7B">Lens</tspan></text>
+  <text x="154" y="140" fill="#64748B" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="15" font-weight="600" letter-spacing="4">EXPLAINABLE ANOMALY INTELLIGENCE</text>
+  <path d="M154 158h470" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="154" y="184" fill="#334155" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="14" font-weight="500" letter-spacing="1.2">See the signal. Understand the anomaly. Act with confidence.</text>
+</svg>
