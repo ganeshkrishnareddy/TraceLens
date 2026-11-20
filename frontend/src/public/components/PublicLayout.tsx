@@ -141,6 +141,11 @@ function PublicFooter() {
               </a>
             </li>
             <li>
+              <a className="text-body hover:text-primary" href="https://github.com/ganeshkrishnareddy/TraceLens" target="_blank" rel="noopener noreferrer">
+                Source code
+              </a>
+            </li>
+            <li>
               <a className="text-body hover:text-primary" href="https://pganeshkrishnareddy.vercel.app/" target="_blank" rel="noopener noreferrer">
                 Portfolio
               </a>

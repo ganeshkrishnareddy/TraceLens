@@ -184,6 +184,16 @@ Full API reference: `documentation/API_REFERENCE.md`. Journey coverage:
 
 ---
 
+## About me
+
+I'm **Ganesh Krishna Reddy** — the individual participant behind ProgVision and the builder of TraceLens. I put this project together as an independent, AI-assisted submission for AEGYTHON 2026, focused on making anomaly detection something an analyst can question and explain. The work spans the detection engine, the FastAPI backend, the React interface, the documentation and the guided judge walkthrough.
+
+- **GitHub:** [@ganeshkrishnareddy](https://github.com/ganeshkrishnareddy)
+- **Source code:** [github.com/ganeshkrishnareddy/TraceLens](https://github.com/ganeshkrishnareddy/TraceLens)
+- **LinkedIn:** [linkedin.com/in/pganeshkrishnareddy](https://linkedin.com/in/pganeshkrishnareddy)
+
+---
+
 ## Scope and honesty
 
 This is an independent, AI-assisted competition prototype running locally. It makes no
@@ -200,6 +210,7 @@ general result.
 - **Email:** pganeshkrishnareddy@gmail.com
 - **LinkedIn:** https://linkedin.com/in/pganeshkrishnareddy
 - **GitHub:** https://github.com/ganeshkrishnareddy
+- **This repository:** https://github.com/ganeshkrishnareddy/TraceLens
 - **Portfolio:** https://pganeshkrishnareddy.vercel.app/
 
 Licensed under the [MIT License](LICENSE).

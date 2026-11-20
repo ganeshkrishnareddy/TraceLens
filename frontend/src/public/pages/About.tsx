@@ -92,6 +92,9 @@ export function About() {
             <a className="btn-secondary inline-flex items-center gap-2" href="https://github.com/ganeshkrishnareddy" target="_blank" rel="noopener noreferrer">
               <Github size={15} aria-hidden="true" /> GitHub
             </a>
+            <a className="btn-secondary inline-flex items-center gap-2" href="https://github.com/ganeshkrishnareddy/TraceLens" target="_blank" rel="noopener noreferrer">
+              <Github size={15} aria-hidden="true" /> Source on GitHub
+            </a>
             <a className="btn-secondary inline-flex items-center gap-2" href="https://pganeshkrishnareddy.vercel.app/" target="_blank" rel="noopener noreferrer">
               <ExternalLink size={15} aria-hidden="true" /> Portfolio
             </a>
