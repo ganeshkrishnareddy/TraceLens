@@ -52,4 +52,4 @@ The reference artefacts from the command above are in
 ## Test-suite evidence
 
 The automated suite was run with `python -m pytest backend/tests tests -q`:
-**35 passed**. See `TESTING_REPORT.md` for the inventory.
+**66 passed**. See `TESTING_REPORT.md` for the inventory.

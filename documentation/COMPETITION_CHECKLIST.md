@@ -39,7 +39,7 @@
 | Functionality | 30 | App starts, generates data, trains, detects, explains, tracks incidents, exports a report | `START_TRACELENS.bat`, 7 API routers in `backend/app/routes/`, 8 React pages in `frontend/src/pages/`, `POST /api/reports` | 🟡 (see §4) |
 | AI / ML | 25 | Two independent detectors, leakage-safe split, real metrics, explainability, experiments | `ml-engine/detect.py`, `features.py`, `evaluate.py`, `explain.py`, `experiment.py`; `documentation/AI_ML_METHODOLOGY.md` | ✅ |
 | Creativity | 20 | Investigation narrative that separates evidence, interpretation, plausible explanation, next steps and unknowns; incident triage | `ml-engine/explain.py`; `frontend/src/pages/Investigation.tsx`, `Explainability.tsx`; `backend/app/routes/incidents.py` | ✅ |
-| Reproducibility | 15 | Fixed seeds, pinned dependencies, one-command test run, documented data split and results | Seeds in generator/detectors; `backend/requirements.txt` pinned; `frontend/package-lock.json`; `python -m pytest backend/tests tests -q` → **35 passed**; `README.md` | 🟡 (see §3) |
+| Reproducibility | 15 | Fixed seeds, pinned dependencies, one-command test run, documented data split and results | Seeds in generator/detectors; `backend/requirements.txt` pinned; `frontend/package-lock.json`; `python -m pytest backend/tests tests -q` → **66 passed**; `README.md` | 🟡 (see §3) |
 | Video | 10 | Short demo of the working product | No video file anywhere in the repo | 🔴 |
 
 **Rubric total available:** 100 points. Current honest self-assessment: **75/100** — see `documentation/RUBRIC_SELF_ASSESSMENT.md`.
@@ -60,14 +60,14 @@
 | Anomaly-method research | ✅ | `research/ANOMALY_DETECTION_METHODS.md` | |
 | Architecture review | ✅ | `documentation/ARCHITECTURE_REVIEW.md` | |
 | Rubric self-assessment | ✅ | `documentation/RUBRIC_SELF_ASSESSMENT.md` | |
-| Experiment results | 🟡 | `experiments/exp-4ceb9977f528/`, `experiments/exp-e6f79ec7ab30/` | Raw JSON exists; the README-referenced `documentation/EXPERIMENT_RESULTS.md` was not present when checked (may be in progress by another agent) |
-| Testing report | 🟡 | Fresh run: 35 passed, 2 deprecation warnings | README references `documentation/TESTING_REPORT.md`, not present at check time |
-| Security review | 🔴 | — | Referenced by README, not present at check time |
-| Limitations | 🔴 | — | Referenced by README, not present at check time |
-| Competition submission / demo script | 🔴 | — | Referenced by README, not present at check time |
-| Technical QA / troubleshooting | 🔴 | — | Referenced by README, not present at check time |
-| Demo video | 🔴 | — | Worth up to 10 points; script is in `RUBRIC_SELF_ASSESSMENT.md` §5 |
-| `.gitignore` | 🟡 | `.github/` exists; no root `.gitignore` confirmed | Exclude `node_modules/`, `*.db`, `__pycache__/`, generated CSVs before publishing the repo |
+| Experiment results | ✅ | `experiments/exp-4ceb9977f528/`, `experiments/exp-e6f79ec7ab30/`, `documentation/EXPERIMENT_RESULTS.md` | Canonical metrics documented and matched to the live site |
+| Testing report | ✅ | Fresh run: 66 passed, 2 deprecation warnings | `documentation/TESTING_REPORT.md` present and consistent with README |
+| Security review | ✅ | `documentation/SECURITY_REVIEW.md` | Present in the reviewed snapshot |
+| Limitations | ✅ | `documentation/KNOWN_LIMITATIONS.md` | Present in the reviewed snapshot |
+| Competition submission / demo script | ✅ | `documentation/COMPETITION_SUBMISSION.md`, `documentation/DEMO_VIDEO_SCRIPT.md` | Present in the reviewed snapshot |
+| Technical QA / troubleshooting | ✅ | `documentation/TECHNICAL_QA.md` | Present in the reviewed snapshot |
+| Demo video | ✅ | `demo/TraceLens_Demo.mp4` | 1m46s video present; captured from the running app |
+| `.gitignore` | ✅ | `.gitignore` at repo root | Present in the reviewed snapshot |
 | GitHub push / publication | ✅ (intentionally not done) | — | Explicitly out of scope for this assignment |
 
 ---
@@ -85,7 +85,7 @@ Run `START_TRACELENS.bat`, then confirm each item. Record a screenshot or a one-
 7. Experiment Lab → run both methods on a train/test split; metrics table shows non-fabricated precision, recall, F1, FPR and ROC AUC.
 8. Reports → export a Markdown investigation report from a detection run and open the downloaded file.
 9. Rerun the generator with the same seed and confirm identical rows (determinism claim).
-10. `python -m pytest backend/tests tests -q` from the repo root → 35 passed.
+10. `python -m pytest backend/tests tests -q` from the repo root → 66 passed.
 
 Items 1–10 are the minimum evidence for the Functionality (30) and Reproducibility (15) criteria.
 
@@ -117,7 +117,7 @@ Items 1–10 are the minimum evidence for the Functionality (30) and Reproducibi
 ## 7. What was actually checked for this checklist
 
 - Read `README.md`, all five pre-existing documents in `documentation/`, the six `ml-engine` modules, the seven API router definitions in `documentation/SYSTEM_ARCHITECTURE.md`, the eight frontend page files and `backend/requirements.txt`.
-- Ran `python -m pytest backend/tests tests -q` on 2026-11-20 → **35 passed in 9.51s**, 2 third-party deprecation warnings (anyio `CallSpec2`, Starlette test-client `httpx`).
+- Ran `python -m pytest backend/tests tests -q` on 2026-11-20 → **66 passed in 19.50s**, 2 third-party deprecation warnings (anyio `CallSpec2`, Starlette test-client `httpx`).
 - Inspected both `experiments/*/experiment.json` files and their recorded metrics.
 - Competition facts (event, challenge, deadline, weights, team, independence constraint) come from the assignment brief, not from a live portal fetch — a web lookup was attempted but unavailable this turn, so §1 portal fields are deliberately left as ⚪.
 

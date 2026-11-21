@@ -14,7 +14,9 @@
 
 **Live site: [tracelensproject.netlify.app](https://tracelensproject.netlify.app/)**
 
-**AEGYTHON 2026 · ProgVision · Individual participant · P. Ganesh Krishna Reddy**
+**AEGYTHON 2026 · Track 2 — Find the Anomaly · ProgVision · Individual participant · P. Ganesh Krishna Reddy**
+
+**Baseline reviewed commit:** [`59bd8ed`](https://github.com/ganeshkrishnareddy/TraceLens/commit/59bd8ed), 20 Nov 2026
 
 </div>
 
@@ -136,6 +138,20 @@ START_TRACELENS.bat
 
 Stop with `STOP_TRACELENS.bat`.
 
+### Run with Docker (alternative)
+
+Docker and Docker Compose are optional; the native steps above are the primary path.
+
+```bat
+docker compose up --build
+```
+
+Open http://localhost:5173 (website and analyst app); the API is on
+http://localhost:8000 and its health check is at http://localhost:8000/api/health.
+Stop everything with `docker compose down`. The API container keeps the repository's
+`datasets/`, `models/`, `experiments/` and `reports/` folders, and the web container
+proxies `/api` to it, so the same real workflows run in both setups.
+
 ### Demo account
 
 | Field | Value |
@@ -178,6 +194,8 @@ TraceLens/
 ├── demo/               demo video and reproducible capture sources
 ├── scripts/            migration and screenshot tooling
 ├── tests/              backend and engine tests
+├── backend/Dockerfile / frontend/Dockerfile / frontend/nginx.conf
+├── docker-compose.yml / .dockerignore
 └── START_TRACELENS.bat / STOP_TRACELENS.bat
 ```
 

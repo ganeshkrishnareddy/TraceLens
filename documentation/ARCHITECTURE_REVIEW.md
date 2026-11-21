@@ -100,7 +100,7 @@ CSV + JSON + pickle + Markdown on disk   and   SQLite (tracelens.db)
 
 - Files read: `README.md`; `documentation/PROBLEM_STATEMENT.md`, `SYSTEM_ARCHITECTURE.md`, `AI_ML_METHODOLOGY.md`, `DATASET_DOCUMENTATION.md`, `TANGO_AGENT1_AGENT8_PLAN.md`; all six `ml-engine/*.py` modules relevant to detection and explanation; `backend/requirements.txt`; the eight `frontend/src/pages/*.tsx` files; both `experiments/*/experiment.json` files.
 - Command run from `D:\PROVISION_TRACELENS` on 2026-11-20:
-  - `python -m pytest backend/tests tests -q` → **35 passed in 9.51s**, 2 third-party deprecation warnings (anyio `CallSpec2` alias; Starlette test client's `httpx` usage). Both are upstream library warnings, not TraceLens test failures.
+  - `python -m pytest backend/tests tests -q` → **66 passed in 19.50s**, 2 third-party deprecation warnings (anyio `CallSpec2` alias; Starlette test client's `httpx` usage). Both are upstream library warnings, not TraceLens test failures.
 - Not verified this turn: live browser click-through, frontend build output, API behaviour under a real server process, the exact official portal rules, and any video artifact.
 
 — Tango

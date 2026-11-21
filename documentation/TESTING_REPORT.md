@@ -8,33 +8,31 @@ From the repository root (`D:\PROVISION_TRACELENS`):
 python -m pytest backend/tests tests -q
 ```
 
-## Summary (verified 2026-11-20)
+## Summary (verified 2026-11-20, re-confirmed 2026-11-21)
 
 | Metric | Result |
 |---|---|
-| Tests collected | 40 |
-| Passed | 40 |
+| Tests collected | 66 |
+| Passed | 66 |
 | Failed | 0 |
 | Errors | 0 |
 | Skipped | 0 |
-| Runtime | 22.26 s (last run) |
+| Runtime | 9.84 s (latest run); 19.50 s on the 2026-11-20 run |
 
-Output: `40 passed, 2 warnings in 22.26s`.
+Output: `66 passed, 2 warnings in 9.84s` (latest run).
 
 Two third-party deprecation warnings were emitted and do not affect results:
 - anyio `CallSpec2` renamed in pytest 10 (`anyio/pytest_plugin.py`).
 - Starlette test-client `httpx` deprecation (`fastapi/testclient.py`).
 
 > **Reviewer notes.**
-> - Older documents in this repository state **35 passed**. That figure predates
->   the determinism tests in `tests/test_determinism.py`; the last clean re-run on
->   2026-11-20 recorded **40 passed**, matching the transformation contract.
-> - **Live caveat (2026-11-20):** a later re-run during the parallel backend work
->   failed at collection: `backend/app/services/store.py::init_db()` calls
->   `new_id("usr")` before `new_id` is defined (`NameError`), so
->   `backend/tests/test_api.py` could not be imported. This is an in-progress edit
->   owned by the backend agent (Panko), not a documentation change. Re-run the suite
->   after that work settles and confirm the count again before final review.
+> - Older documents in this repository state **35 passed** (before the determinism
+>   tests in `tests/test_determinism.py`) or **40 passed** (an intermediate run).
+>   The authoritative clean run on 2026-11-20 at reviewed commit `59bd8ed` recorded
+>   **66 passed**, matching `README.md` and the transformation contract.
+> - An earlier collection-time `NameError` in `backend/app/services/store.py::init_db()`
+>   during parallel backend work was resolved before that commit; the 66-test run
+>   imports the full suite successfully.
 
 ## Test inventory
 

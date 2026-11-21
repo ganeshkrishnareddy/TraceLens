@@ -24,7 +24,7 @@
 - [x] Health endpoint returns `{"status":"healthy",...}` at `/api/health`.
 - [x] Dataset → train → detect → incidents → experiment → report flow returns HTTP 200.
 - [x] Frontend scaffold present with `npm run dev` (Vite port 5173).
-- [x] Full pytest suite passes: 35 passed.
+- [x] Full pytest suite passes: 66 passed.
 - [x] START/STOP batch scripts written at repository root.
 
 ## Manual verification performed
@@ -58,4 +58,4 @@ The canonical 1440-row reference experiment is recorded in
 - `START_TRACELENS.bat` / `STOP_TRACELENS.bat` delivered at repository root.
 - README, 10 documentation files, `.env.example`, `.gitignore`, `LICENSE`,
   `CONTRIBUTING.md` delivered.
-- Pytest pass/fail summary recorded (35 passed, 0 failed).
+- Pytest pass/fail summary recorded (66 passed, 0 failed).

@@ -35,7 +35,7 @@ unknowns — all behind a light-themed dashboard and a documented REST API.
    `EXPERIMENT_RESULTS.md` (MAD recall 0.7639 vs Isolation Forest 0.5694 on the
    reference split).
 7. **Reports** — generate and download the Markdown investigation report.
-8. **Quality** — run `python -m pytest backend/tests tests -q` → 35 passed.
+8. **Quality** — run `python -m pytest backend/tests tests -q` → 66 passed.
 
 ## API demo alternative
 

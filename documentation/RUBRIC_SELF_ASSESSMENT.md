@@ -11,7 +11,7 @@
 
 | Criterion | Weight | Score | Basis | Deduction reason |
 | --- | ---: | ---: | --- | --- |
-| Functionality | 30 | **26** | Seven API router groups, eight implemented React pages, seeded generator, two detectors, threshold control, incident triage, experiment comparison, Markdown report export; 35 tests pass | 4 withheld: no end-to-end browser smoke test was recorded by this assessor, and the acceptance list in `COMPETITION_CHECKLIST.md` §4 has not been signed off item by item |
+| Functionality | 30 | **26** | Seven API router groups, eight implemented React pages, seeded generator, two detectors, threshold control, incident triage, experiment comparison, Markdown report export; 66 tests pass | 4 withheld: no end-to-end browser smoke test was recorded by this assessor, and the acceptance list in `COMPETITION_CHECKLIST.md` §4 has not been signed off item by item |
 | AI / ML | 25 | **20** | Two independent detectors, leakage-safe stratified split, robust scaling fit on train only, scikit-learn metrics (precision/recall/F1/FPR/ROC AUC), per-record structured explanations, reproducible experiment runner | 5 withheld: headline metrics come from 36/72-row runs and shift between them (0.667 → 0.870 F1 for Isolation Forest); Isolation Forest scores are batch-relative; threshold selection on test is not ruled out |
 | Creativity | 20 | **17** | Investigation narrative separates observed evidence / model interpretation / non-causal possible explanation / recommended checks / explicit unknowns; incident workflow; method-comparison UI; honest "we do not claim root cause" stance | 3 withheld: no SHAP/LIME or counterfactual view, and explanation statistics (std) are not aligned with the detector's robust MAD spread |
 | Reproducibility | 15 | **12** | Fixed seeds, pinned `backend/requirements.txt` and `frontend/package-lock.json`, one-command start/stop scripts, documented split and imputation policy, persisted experiment JSON + per-record prediction CSVs, MIT `LICENSE`, one-command test suite | 3 withheld: six README-referenced documents were absent at check time; no recorded canonical large run; no documented runtime config log |
@@ -76,7 +76,7 @@ Execute checks 1–10 in `COMPETITION_CHECKLIST.md` §4, save pass/fail notes an
 ## 4. Evidence used for this assessment
 
 - Static review of `README.md`, `PROBLEM_STATEMENT.md`, `SYSTEM_ARCHITECTURE.md`, `AI_ML_METHODOLOGY.md`, `DATASET_DOCUMENTATION.md`, all six `ml-engine` modules, `backend/requirements.txt`, all eight frontend page components, and both experiment JSON files.
-- Fresh test run on 2026-11-20 from `D:\PROVISION_TRACELENS`: `python -m pytest backend/tests tests -q` → **35 passed in 9.51s**, 2 upstream deprecation warnings.
+- Fresh test run on 2026-11-20 from `D:\PROVISION_TRACELENS`: `python -m pytest backend/tests tests -q` → **66 passed in 19.50s**, 2 upstream deprecation warnings.
 - Measured experiment figures (copied, not estimated):
 
 | Run | Test rows | Method | F1 | ROC AUC |
